@@ -42,13 +42,13 @@ Streamer::Streamer() :
   this->declare_parameter("configuration.flip_mode");
   this->declare_parameter("configuration.camera_calibration_file");
 
-  this->get_parameter_or<int>("configuration.cap_width", configuration_.cap_width, 1280);
-  this->get_parameter_or<int>("configuration.cap_height", configuration_.cap_height, 720);
+  this->get_parameter_or<int>("configuration.cap_width", configuration_.cap_width, 640 /*1280*/);
+  this->get_parameter_or<int>("configuration.cap_height", configuration_.cap_height, 480 /*720*/);
   this->get_parameter_or<std::string>("configuration.frame_id", configuration_.frame_id, "camera");
   this->get_parameter_or<std::string>("configuration.camera_name", configuration_.camera_name, "raspicam");
   this->get_parameter_or<int>("configuration.display_width", configuration_.display_width, 640);
   this->get_parameter_or<int>("configuration.display_height", configuration_.display_height, 480);
-  this->get_parameter_or<double>("configuration.framerate", configuration_.framerate, 90);
+  this->get_parameter_or<double>("configuration.framerate", configuration_.framerate, 30.0);
   this->get_parameter_or<int>("configuration.flip_mode", configuration_.flip_mode, 2);
   this->get_parameter_or<std::string>("configuration.camera_calibration_file", configuration_.camera_calibration_file, "package://ros2_camera/config/picam_calibration.yaml");
 

@@ -2,15 +2,15 @@
   ros__parameters:
 
     configuration:
-      cap_width: 1280
-      cap_height: 720
+      cap_width: 640 #1280
+      cap_height: 480  #720
       frame_id: "camera_link"
       camera_name: "raspicam"
       display_width: 640
       display_height: 480
-      framerate: 90
+      framerate: 30.0
       # 0=reverse, 2=normal
-      flip_mode: 2 
-      camera_calibration_file: "package://rastreator_camera/config/picam_calibration.yaml"
+      flip_mode: 0 
+      # camera_calibration_file: "package://rastreator_camera/config/picam_calibration.yaml"
         
 
